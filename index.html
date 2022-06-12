@@ -6,6 +6,24 @@
 </head>
 <body>
    <script>
+      //main method here
+      console.log(computerPlay(1, 3));
+      //create function computerPlay that randomly picks RPS
+      
+      function computerPlay(min, max) {
+         let step1 = max - min + 1;
+         console.log(step1);
+         let step2 = Math.random() * step1;
+         console.log(step2);
+         let result = Math.floor(step2) + min;
+         console.log(result);
+         
+         return result;
+      }
+      
+      //function that takes playerSelection and computerSelection and decides winner
+      
+      //game() function here
    </script>
 </body>
 </html>
