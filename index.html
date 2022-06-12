@@ -7,7 +7,7 @@
 <body>
    <script>
       //main method here
-      console.log(playRound("sCisSoRs", computerPlay(1,3)));
+      game();
       
       //create function computerPlay that randomly picks RPS
          function computerPlay(min, max) {
@@ -76,16 +76,25 @@
       
       //game() function here
       function game() {
+         let playerWins = 0;
+         let computerWins = 0;
+         let tieGames = 0;
+      
          for (let i = 0; i < 5; i++) {
            gameResult = playRound("sCisSoRs", computerPlay(1,3));
-           
+           console.log(gameResult);
            if (gameResult == "You win!"){
+              playerWins++;
            }
            if (gameResult == "You lose!"){
+              computerWins++;
            }
            if (gameResult == "Tie game!"){
+              tieGames++;
            }
          }
+         
+         console.log("Player:" + playerWins + " Computer:" + computerWins + " Ties:" + tieGames);
       }
       
    </script>
