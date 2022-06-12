@@ -8,7 +8,6 @@
    <script>
       //main method here
       game();
-      
       //create function computerPlay that randomly picks RPS
          function computerPlay(min, max) {
          let step1 = max - min + 1;
@@ -24,10 +23,8 @@
          if (result == 3){
            return("scissors");
          }
-      }
-      
+      }      
       //function that takes playerSelection and computerSelection and decides winner
-      
       function playRound(playerSelection, computerSelection){
          playerSelection = playerSelection.toLowerCase();
          console.log(playerSelection);
@@ -72,8 +69,7 @@
          else {
            console.log("Invalid input");
          }
-      }
-      
+      }      
       //game() function here
       function game() {
          let playerWins = 0;
@@ -81,7 +77,8 @@
          let tieGames = 0;
       
          for (let i = 0; i < 5; i++) {
-           gameResult = playRound("sCisSoRs", computerPlay(1,3));
+           let playerChoice = prompt("Please choose rock, paper, or scissors");
+           gameResult = playRound(playerChoice, computerPlay(1,3));
            console.log(gameResult);
            if (gameResult == "You win!"){
               playerWins++;
@@ -93,10 +90,8 @@
               tieGames++;
            }
          }
-         
          console.log("Player:" + playerWins + " Computer:" + computerWins + " Ties:" + tieGames);
       }
-      
    </script>
 </body>
 </html>
