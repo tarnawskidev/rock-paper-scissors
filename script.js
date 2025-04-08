@@ -4,6 +4,7 @@ const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
 
 const results = document.querySelector("#result");
+const winner = document.querySelector("#winner");
 const playerTally = document.querySelector("#playerScore");
 const computerTally = document.querySelector("#computerScore");
 
@@ -100,4 +101,10 @@ function showResult(result){
         results.textContent = "Tie game!";
     }
     
+    if (playerScore==5) {
+        winner.textContent="Player wins!";
+    } else if (computerScore==5) {
+        winner.textContent="Computer wins!";
+    }
 }
+
